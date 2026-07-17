@@ -1,6 +1,6 @@
-import { assertClient } from "./ssr";
+import { assertClient } from "./ssr.js";
 import { Form as JsForm } from "@bpmn-io/form-js";
-import type { FormHandle, ViewerOptions, FormSchema, FormData, SubmitHandler } from "./types";
+import type { FormHandle, ViewerOptions, FormSchema, FormData, SubmitHandler } from "./types.js";
 
 export async function createForm(options: ViewerOptions): Promise<FormHandle> {
   assertClient();

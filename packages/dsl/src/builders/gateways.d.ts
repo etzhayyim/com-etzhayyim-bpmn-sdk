@@ -1,4 +1,4 @@
-import type { DslContext, MutableGatewayIR, MutableSequenceFlowIR } from '../bpmn-dsl';
+import type { DslContext, MutableGatewayIR, MutableSequenceFlowIR } from '../bpmn-dsl.js';
 export declare class BaseGatewayBuilder {
     protected context: DslContext;
     protected gateway: MutableGatewayIR;

@@ -63,10 +63,6 @@ vi.mock('bpmn-engine', () => ({
   })),
 }));
 
-vi.mock('bpmn-moddle', () => ({
-  default: vi.fn(),
-}));
-
 vi.mock('moddle-xml', () => ({
   toXML: vi.fn().mockImplementation((obj, options) => Promise.resolve({ xml: '<xml>test</xml>' })),
   fromXML: vi.fn().mockImplementation(async (xml, options) => ({

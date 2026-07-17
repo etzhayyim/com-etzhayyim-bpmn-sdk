@@ -1,4 +1,4 @@
-import type { BaseElement, FlowElement, Expression } from './common';
+import type { BaseElement, FlowElement, Expression } from './common.js';
 export type TaskType = 'service' | 'user' | 'manual' | 'script' | 'businessRule' | 'send' | 'receive' | 'callActivity';
 export interface BaseTask extends FlowElement {
     readonly taskType: TaskType;

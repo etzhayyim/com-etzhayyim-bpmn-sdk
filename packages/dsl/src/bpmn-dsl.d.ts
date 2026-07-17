@@ -14,8 +14,8 @@ export interface MutableSubProcessIR extends Omit<SubProcessIR, 'name'> {
 export interface MutableSequenceFlowIR extends Omit<SequenceFlowIR, 'name'> {
     name?: string;
 }
-import { StartEventBuilder, EndEventBuilder, IntermediateCatchEventBuilder, BoundaryEventBuilder, ServiceTaskBuilder, UserTaskBuilder, ManualTaskBuilder, ScriptTaskBuilder, BusinessRuleTaskBuilder, SendTaskBuilder, ReceiveTaskBuilder, CallActivityBuilder, ExclusiveGatewayBuilder, InclusiveGatewayBuilder, ParallelGatewayBuilder, EventBasedGatewayBuilder, ComplexGatewayBuilder, EmbeddedSubprocessBuilder, SequenceFlowBuilder } from './builders';
-import { LaneSetBuilder } from './builders/subprocess';
+import { StartEventBuilder, EndEventBuilder, IntermediateCatchEventBuilder, BoundaryEventBuilder, ServiceTaskBuilder, UserTaskBuilder, ManualTaskBuilder, ScriptTaskBuilder, BusinessRuleTaskBuilder, SendTaskBuilder, ReceiveTaskBuilder, CallActivityBuilder, ExclusiveGatewayBuilder, InclusiveGatewayBuilder, ParallelGatewayBuilder, EventBasedGatewayBuilder, ComplexGatewayBuilder, EmbeddedSubprocessBuilder, SequenceFlowBuilder } from './builders/index.js';
+import { LaneSetBuilder } from './builders/subprocess.js';
 export declare class DslContext {
     private idCounter;
     private elements;

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { BpmnImporter, parseXml } from './bpmn-importer';
+import { BpmnImporter, parseXml } from './bpmn-importer.js';
 
 // Mock moddle-xml
 vi.mock('moddle-xml', () => ({

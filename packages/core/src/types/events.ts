@@ -1,7 +1,7 @@
 // Merkle DAG: bpmn_event_types
 // BPMN 2.0 Event 型定義 - 完全網羅
 
-import type { BaseElement, FlowElement, EventDefinition } from './common';
+import type { BaseElement, FlowElement, EventDefinition } from './common.js';
 
 // Event Types
 export type EventType = 'start' | 'intermediate' | 'end' | 'boundary';

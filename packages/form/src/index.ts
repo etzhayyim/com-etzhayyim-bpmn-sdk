@@ -1,7 +1,7 @@
-export * from "./types";
-export * from "./ssr";
-export * from "./viewer";
-export * from "./editor";
-export * from "./playground";
-export * as FormUtils from "./utils/getSchemaVariables";
+export * from "./types.js";
+export * from "./ssr.js";
+export * from "./viewer.js";
+export * from "./editor.js";
+export * from "./playground.js";
+export * as FormUtils from "./utils/getSchemaVariables.js";
 

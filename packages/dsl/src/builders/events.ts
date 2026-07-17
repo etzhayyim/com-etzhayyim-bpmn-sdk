@@ -2,7 +2,7 @@
 // DSL Event Builders - Start/End/Intermediate/Boundary Events
 
 import type { EventIR, EventDefinitionIR } from '@etzhayyim/bpmn-sdk-core';
-import type { DslContext, MutableEventIR } from '../bpmn-dsl';
+import type { DslContext, MutableEventIR } from '../bpmn-dsl.js';
 
 // Base Event Builder
 export class BaseEventBuilder {

@@ -10,7 +10,7 @@ import type {
   TaskAttachment,
   TaskSLA,
   TaskEvent,
-} from './types';
+} from './types.js';
 
 export class HumanTaskManager {
   private runtime: BpmnRuntime;

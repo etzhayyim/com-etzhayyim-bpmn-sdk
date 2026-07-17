@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { createFormPlayground } from '../../src/playground';
+import { createFormPlayground } from '../../src/playground.js';
 
 describe('form playground', () => {
   let container: HTMLElement;

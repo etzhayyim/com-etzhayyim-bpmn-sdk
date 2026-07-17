@@ -17,7 +17,7 @@ import type {
   AlertSeverity,
   HealthStatus,
   PerformanceSnapshot,
-} from './types';
+} from './types.js';
 
 export class BpmnMonitor {
   private config: MonitoringConfig;

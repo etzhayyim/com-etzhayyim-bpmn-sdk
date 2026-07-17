@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { BpmnMonitor } from './bpmn-monitor';
+import { BpmnMonitor } from './bpmn-monitor.js';
 import { BpmnRuntime } from '@etzhayyim/bpmn-sdk-runtime';
 
 describe('@etzhayyim/bpmn-sdk-ops', () => {
@@ -374,3 +374,4 @@ describe('@etzhayyim/bpmn-sdk-ops', () => {
     });
   });
 });
+// @vitest-environment node

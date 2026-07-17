@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import * as Core from './index';
+import * as Core from './index.js';
 
 // Test core exports
 describe('@etzhayyim/bpmn-sdk-core', () => {

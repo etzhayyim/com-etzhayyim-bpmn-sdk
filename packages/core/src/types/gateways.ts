@@ -1,7 +1,7 @@
 // Merkle DAG: bpmn_gateway_types
 // BPMN 2.0 Gateway 型定義 - 完全網羅
 
-import type { FlowElement, Expression } from './common';
+import type { FlowElement, Expression } from './common.js';
 
 // Gateway Types
 export type GatewayType = 'exclusive' | 'inclusive' | 'parallel' | 'eventBased' | 'complex';

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { flow, FlowBuilder, ProcessBuilder } from './bpmn-dsl';
+import { flow, FlowBuilder, ProcessBuilder } from './bpmn-dsl.js';
 
 describe('@etzhayyim/bpmn-sdk-dsl', () => {
   describe('flow()', () => {

@@ -2,7 +2,7 @@
 // DSL Task Builders - Service/User/Manual/Script/BusinessRule/Send/Receive/CallActivity
 
 import type { TaskIR } from '@etzhayyim/bpmn-sdk-core';
-import type { DslContext, MutableTaskIR } from '../bpmn-dsl';
+import type { DslContext, MutableTaskIR } from '../bpmn-dsl.js';
 
 // Base Task Builder
 export class BaseTaskBuilder {

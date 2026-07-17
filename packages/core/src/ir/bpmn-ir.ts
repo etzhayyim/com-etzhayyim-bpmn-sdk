@@ -19,7 +19,7 @@ import type {
   DataObject,
   DataStore,
   Artifact,
-} from '../types';
+} from '../types/index.js';
 
 // BPMN IR - Internal Representation for BPMN 2.0
 export interface BpmnIR {

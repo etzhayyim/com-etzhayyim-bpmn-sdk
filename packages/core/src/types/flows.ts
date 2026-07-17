@@ -1,7 +1,7 @@
 // Merkle DAG: bpmn_flow_types
 // BPMN 2.0 Flow 型定義 - Sequence/Message Flows
 
-import type { BaseElement, FlowElement, Expression, ExtensionElements } from './common';
+import type { BaseElement, FlowElement, Expression, ExtensionElements } from './common.js';
 
 // Sequence Flow - Control flow between activities
 export interface SequenceFlow extends BaseElement {

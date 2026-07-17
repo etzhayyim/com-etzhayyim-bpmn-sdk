@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { createForm } from '../../src/viewer';
+import { createForm } from '../../src/viewer.js';
 
 describe('form viewer', () => {
   let container: HTMLElement;

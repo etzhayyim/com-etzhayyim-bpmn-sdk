@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { BpmnCompiler } from './bpmn-compiler';
+import { BpmnCompiler } from './bpmn-compiler.js';
 
 describe('@etzhayyim/bpmn-sdk-compiler', () => {
   let compiler: BpmnCompiler;

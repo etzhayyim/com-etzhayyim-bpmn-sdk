@@ -1,6 +1,6 @@
-import type { BaseElement, FlowElement, Expression, CancelEventDefinition, CompensationEventDefinition, EventDefinition } from './common';
-import type { MessageFlow, DataStore } from './flows';
-import type { Artifact } from './subprocess';
+import type { BaseElement, FlowElement, Expression, CancelEventDefinition, CompensationEventDefinition, EventDefinition } from './common.js';
+import type { MessageFlow, DataStore } from './flows.js';
+import type { Artifact } from './subprocess.js';
 export interface Definitions extends BaseElement {
     readonly targetNamespace: string;
     readonly expressionLanguage?: string;

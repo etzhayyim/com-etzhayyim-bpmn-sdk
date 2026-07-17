@@ -1,3 +1,3 @@
-export * from './types';
-export * from './ir/bpmn-ir';
+export * from './types/index.js';
+export * from './ir/bpmn-ir.js';
 //# sourceMappingURL=index.d.ts.map

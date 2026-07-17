@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { BpmnPropertyTester, bpmnPropertyTest, bpmnScenarioTest } from './bpmn-property-test';
+import { BpmnPropertyTester, bpmnPropertyTest, bpmnScenarioTest } from './bpmn-property-test.js';
 import { BpmnRuntime } from '@etzhayyim/bpmn-sdk-runtime';
 
 describe('@etzhayyim/bpmn-sdk-testing', () => {
@@ -356,3 +356,4 @@ describe('@etzhayyim/bpmn-sdk-testing', () => {
     });
   });
 });
+// @vitest-environment node

@@ -1,6 +1,6 @@
-import { assertClient } from "./ssr";
+import { assertClient } from "./ssr.js";
 import { FormPlayground as JsFormPlayground } from "@bpmn-io/form-js";
-import type { PlaygroundOptions, FormPlaygroundHandle } from "./types";
+import type { PlaygroundOptions, FormPlaygroundHandle } from "./types.js";
 
 export async function createFormPlayground(options: PlaygroundOptions): Promise<FormPlaygroundHandle> {
   assertClient();

@@ -1,6 +1,6 @@
-import { assertClient } from "./ssr";
+import { assertClient } from "./ssr.js";
 import { FormEditor as JsFormEditor } from "@bpmn-io/form-js";
-import type { EditorOptions, FormEditorHandle } from "./types";
+import type { EditorOptions, FormEditorHandle } from "./types.js";
 
 export async function createFormEditor(options: EditorOptions): Promise<FormEditorHandle> {
   assertClient();

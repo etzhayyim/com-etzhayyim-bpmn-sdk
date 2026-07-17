@@ -2,8 +2,8 @@
 // BPMN Validator unit tests for high coverage
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import { BpmnValidator } from './bpmn-validator';
-import type { ValidationOptions } from './types';
+import { BpmnValidator } from './bpmn-validator.js';
+import type { ValidationOptions } from './types.js';
 
 describe('@etzhayyim/bpmn-sdk-validation', () => {
   let validator: BpmnValidator;

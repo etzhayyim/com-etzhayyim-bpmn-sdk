@@ -1,7 +1,7 @@
 // Merkle DAG: bpmn_subprocess_types
 // BPMN 2.0 SubProcess 型定義 - 完全網羅
 
-import type { BaseElement, FlowElement } from './common';
+import type { BaseElement, FlowElement } from './common.js';
 
 // SubProcess Types
 export type SubProcessType = 'embedded' | 'event' | 'transaction' | 'adHoc';

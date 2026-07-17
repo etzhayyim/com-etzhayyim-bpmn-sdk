@@ -58,8 +58,8 @@ import {
   ComplexGatewayBuilder,
   EmbeddedSubprocessBuilder,
   SequenceFlowBuilder,
-} from './builders';
-import { LaneSetBuilder } from './builders/subprocess';
+} from './builders/index.js';
+import { LaneSetBuilder } from './builders/subprocess.js';
 
 // DSL Context - ビルド中の状態管理
 export class DslContext {

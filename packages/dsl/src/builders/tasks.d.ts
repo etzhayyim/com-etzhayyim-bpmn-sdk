@@ -1,4 +1,4 @@
-import type { DslContext, MutableTaskIR } from '../bpmn-dsl';
+import type { DslContext, MutableTaskIR } from '../bpmn-dsl.js';
 export declare class BaseTaskBuilder {
     protected context: DslContext;
     protected task: MutableTaskIR;

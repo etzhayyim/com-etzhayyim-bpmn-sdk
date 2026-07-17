@@ -1,7 +1,7 @@
 // Merkle DAG: bpmn_task_types
 // BPMN 2.0 Task/Activity 型定義 - 完全網羅
 
-import type { BaseElement, FlowElement, Expression } from './common';
+import type { BaseElement, FlowElement, Expression } from './common.js';
 
 // Task Types
 export type TaskType =

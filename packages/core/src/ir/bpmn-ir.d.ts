@@ -1,4 +1,4 @@
-import type { MessageFlow, Participant, Message, Signal, Error, Escalation, DataStore, Artifact } from '../types';
+import type { MessageFlow, Participant, Message, Signal, Error, Escalation, DataStore, Artifact } from '../types/index.js';
 export interface BpmnIR {
     readonly definitions: DefinitionsIR;
 }

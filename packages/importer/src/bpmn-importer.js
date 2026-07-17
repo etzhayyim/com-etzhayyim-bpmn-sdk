@@ -1,6 +1,6 @@
 // Merkle DAG: bpmn_importer
 // BPMN XML → IR Importer (reverse compiler)
-import BpmnModdle from 'bpmn-moddle';
+import { BpmnModdle } from 'bpmn-moddle';
 import { fromXML } from 'moddle-xml';
 // Use type assertions for building (similar to DSL approach)
 // BPMN Importer - Converts BPMN 2.0 XML to IR

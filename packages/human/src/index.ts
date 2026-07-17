@@ -1,7 +1,7 @@
 // Merkle DAG: human_package_index
 // @etzhayyim/bpmn-sdk-human のメインエクスポート
 
-export { HumanTaskManager } from './human-task-manager';
+export { HumanTaskManager } from './human-task-manager.js';
 export type {
   HumanTask,
   TaskStatus,
@@ -14,4 +14,4 @@ export type {
   EscalationAction,
   TaskEvent,
   TaskEventType,
-} from './types';
+} from './types.js';

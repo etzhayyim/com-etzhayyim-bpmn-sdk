@@ -1,5 +1,6 @@
 {
   "name": "@etzhayyim/bpmn-sdk-validation",
+  "type": "module",
   "version": "0.1.0",
   "description": "Static validation for BPMN processes - reachability analysis and structural verification",
   "license": "Apache-2.0",
@@ -18,12 +19,14 @@
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
     "format": "biome format --write .",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@etzhayyim/bpmn-sdk-core": "workspace:*"
+  },
   "devDependencies": {
     "@types/node": "^26.1.1",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "@etzhayyim/bpmn-sdk-core": "workspace:*"
@@ -37,7 +40,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/etzhayyim/root.git",
-    "directory": "20-actors/etzhayyim-bpmn-sdk/packages/validation"
+    "url": "https://github.com/etzhayyim/com-etzhayyim-bpmn-sdk.git"
   }
 }

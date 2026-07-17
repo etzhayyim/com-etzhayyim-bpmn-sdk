@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { BpmnRuntime, ExecutionContext } from './bpmn-runtime';
+import { BpmnRuntime, ExecutionContext } from './bpmn-runtime.js';
 
 describe('@etzhayyim/bpmn-sdk-runtime', () => {
   let runtime: BpmnRuntime;
@@ -358,4 +358,5 @@ describe('@etzhayyim/bpmn-sdk-runtime', () => {
     });
   });
 });
+// @vitest-environment node
 

@@ -23,79 +23,46 @@ async function createOrderProcessingWorkflow() {
   return flow('OrderProcessingWorkflow', f => f
     .process('OrderProcessingWorkflow', p => {
       // === 開始イベント ===
-      p.startEvent('OrderReceived')
-        .name('注文受付')
-        .message('orderMessage');
+      p.startEvent('OrderReceived', '注文受付');
 
       // === 注文検証 ===
-      p.serviceTask('ValidateOrder')
-        .name('注文内容検証')
-        .implementation('orderValidationService');
+      p.serviceTask('ValidateOrder', '注文内容検証');
 
       // === 在庫チェック ===
-      p.serviceTask('CheckInventory')
-        .name('在庫確認')
-        .implementation('inventoryCheckService');
+      p.serviceTask('CheckInventory', '在庫確認');
 
       // === 条件分岐: 金額ベース ===
-      p.exclusiveGateway('AmountCheck')
-        .name('注文金額チェック');
+      p.exclusiveGateway('AmountCheck', '注文金額チェック');
 
       // === 高額注文: 承認フロー ===
-      p.userTask('ManagerApproval')
-        .name('マネージャー承認')
-        .assignee('${managerId}')
-        .dueDate('${approvalDeadline}');
+      p.userTask('ManagerApproval', 'マネージャー承認');
 
       // === 通常注文: 自動処理 ===
-      p.serviceTask('AutoApproval')
-        .name('自動承認')
-        .implementation('autoApprovalService');
+      p.serviceTask('AutoApproval', '自動承認');
 
       // === 支払い処理 ===
-      p.serviceTask('ProcessPayment')
-        .name('支払い処理')
-        .implementation('paymentService');
+      p.serviceTask('ProcessPayment', '支払い処理');
 
       // === 配送準備 ===
-      p.userTask('PrepareShipping')
-        .name('配送準備')
-        .candidateGroups(['warehouse'])
-        .dueDate('${shippingDeadline}');
+      p.userTask('PrepareShipping', '配送準備');
 
       // === 配送 ===
-      p.serviceTask('ShipOrder')
-        .name('注文配送')
-        .implementation('shippingService');
+      p.serviceTask('ShipOrder', '注文配送');
 
       // === 完了 ===
-      p.endEvent('OrderCompleted')
-        .name('注文完了');
+      p.endEvent('OrderCompleted', '注文完了');
 
       // === エラー処理 ===
-      p.boundaryEvent('ValidationError')
-        .attachedToRef('ValidateOrder')
-        .error('validationError')
-        .name('検証エラー');
+      p.boundaryEvent('ValidateOrder', 'ValidationError', '検証エラー');
 
-      p.boundaryEvent('OutOfStock')
-        .attachedToRef('CheckInventory')
-        .signal('outOfStockSignal')
-        .name('在庫不足');
+      p.boundaryEvent('CheckInventory', 'OutOfStock', '在庫不足');
 
-      p.boundaryEvent('PaymentFailed')
-        .attachedToRef('ProcessPayment')
-        .error('paymentError')
-        .name('支払い失敗');
+      p.boundaryEvent('ProcessPayment', 'PaymentFailed', '支払い失敗');
 
       // エラーハンドリングタスク
-      p.serviceTask('SendErrorEmail')
-        .name('エラーメール送信')
-        .implementation('errorEmailService');
+      p.serviceTask('SendErrorEmail', 'エラーメール送信');
 
-      p.serviceTask('NotifyCustomer')
-        .name('顧客通知')
-        .implementation('customerNotificationService');
+      p.serviceTask('NotifyCustomer', '顧客通知');
 
       // === シーケンスフロー ===
 

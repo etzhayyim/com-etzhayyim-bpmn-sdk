@@ -1,5 +1,5 @@
 import { getSchemaVariables as jsGetSchemaVariables } from "@bpmn-io/form-js";
-import type { FormSchema } from "../types";
+import type { FormSchema } from "../types.js";
 
 export interface SchemaVariableOptions {
   inputs?: boolean;

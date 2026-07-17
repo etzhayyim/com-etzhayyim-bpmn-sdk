@@ -1,4 +1,4 @@
-import type { BaseElement, FlowElement } from './common';
+import type { BaseElement, FlowElement } from './common.js';
 export type SubProcessType = 'embedded' | 'event' | 'transaction' | 'adHoc';
 export interface BaseSubProcess extends FlowElement {
     readonly subProcessType: SubProcessType;

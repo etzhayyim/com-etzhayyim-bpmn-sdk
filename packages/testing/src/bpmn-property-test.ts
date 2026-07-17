@@ -13,7 +13,7 @@ import type {
   ScenarioResult,
   TestCoverage,
   ExecutionTrace,
-} from './types';
+} from './types.js';
 
 export class BpmnPropertyTester {
   private runtime: BpmnRuntime;

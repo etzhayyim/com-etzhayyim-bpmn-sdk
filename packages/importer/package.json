@@ -1,5 +1,6 @@
 {
   "name": "@etzhayyim/bpmn-sdk-importer",
+  "type": "module",
   "version": "0.1.0",
   "description": "BPMN XML to IR importer (reverse compiler)",
   "license": "Apache-2.0",
@@ -13,20 +14,21 @@
     }
   },
   "scripts": {
-    "build": "echo 'Build skipped for importer' || true",
+    "build": "tsc",
     "dev": "tsc --watch",
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
     "format": "biome format --write .",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
     "bpmn-moddle": "^10.0.0",
-    "moddle-xml": "^12.0.0"
+    "moddle-xml": "^12.0.0",
+    "@etzhayyim/bpmn-sdk-core": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "@etzhayyim/bpmn-sdk-core": "workspace:*"
@@ -40,7 +42,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/etzhayyim/root.git",
-    "directory": "20-actors/etzhayyim-bpmn-sdk/packages/importer"
+    "url": "https://github.com/etzhayyim/com-etzhayyim-bpmn-sdk.git"
   }
 }

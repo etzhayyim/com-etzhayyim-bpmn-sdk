@@ -19,14 +19,17 @@
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
     "format": "biome format --write .",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "fast-check": "^4.9.0"
+    "fast-check": "^4.9.0",
+    "@etzhayyim/bpmn-sdk-core": "workspace:*",
+    "@etzhayyim/bpmn-sdk-runtime": "workspace:*",
+    "@etzhayyim/bpmn-sdk-validation": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",
-    "typescript": "^7.0.2",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.10"
   },
   "peerDependencies": {
@@ -43,7 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/etzhayyim/root.git",
-    "directory": "20-actors/etzhayyim-bpmn-sdk/packages/testing"
+    "url": "https://github.com/etzhayyim/com-etzhayyim-bpmn-sdk.git"
   }
 }

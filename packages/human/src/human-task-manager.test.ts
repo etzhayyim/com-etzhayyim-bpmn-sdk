@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { HumanTaskManager } from './human-task-manager';
+import { HumanTaskManager } from './human-task-manager.js';
 import { BpmnRuntime } from '@etzhayyim/bpmn-sdk-runtime';
 
 describe('@etzhayyim/bpmn-sdk-human', () => {
@@ -335,3 +335,4 @@ describe('@etzhayyim/bpmn-sdk-human', () => {
     });
   });
 });
+// @vitest-environment node

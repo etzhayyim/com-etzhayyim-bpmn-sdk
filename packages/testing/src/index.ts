@@ -1,7 +1,7 @@
 // Merkle DAG: testing_package_index
 // @etzhayyim/bpmn-sdk-testing のメインエクスポート
 
-export { BpmnPropertyTester, bpmnPropertyTest, bpmnScenarioTest } from './bpmn-property-test';
+export { BpmnPropertyTester, bpmnPropertyTest, bpmnScenarioTest } from './bpmn-property-test.js';
 export type {
   TestResult,
   TestError,
@@ -16,4 +16,4 @@ export type {
   ExecutionTrace,
   TraceEvent,
   ProcessProperty,
-} from './types';
+} from './types.js';

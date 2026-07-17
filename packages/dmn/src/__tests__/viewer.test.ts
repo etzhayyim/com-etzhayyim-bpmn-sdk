@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { createDmnViewer } from '../../src/viewer';
+import { createDmnViewer } from '../../src/viewer.js';
 
 describe('dmn viewer', () => {
   let container: HTMLElement;

@@ -1,4 +1,4 @@
-import type { BaseElement, FlowElement, Expression, ExtensionElements } from './common';
+import type { BaseElement, FlowElement, Expression, ExtensionElements } from './common.js';
 export interface SequenceFlow extends BaseElement {
     readonly sourceRef: string;
     readonly targetRef: string;

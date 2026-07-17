@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "types": ["node"],
     "target": "ES2022",
     "lib": ["ES2022"],
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "allowJs": true,
@@ -25,12 +26,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "composite": true
+    "composite": false
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"],
-  "references": [
-    { "path": "../core" },
-    { "path": "../compiler" }
-  ]
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }

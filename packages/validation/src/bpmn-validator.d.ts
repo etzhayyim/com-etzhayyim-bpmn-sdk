@@ -1,5 +1,5 @@
 import type { BpmnIR } from '@etzhayyim/bpmn-sdk-core';
-import type { ValidationResult, ValidationOptions } from './types';
+import type { ValidationResult, ValidationOptions } from './types.js';
 export declare class BpmnValidator {
     private options;
     constructor(options?: ValidationOptions);

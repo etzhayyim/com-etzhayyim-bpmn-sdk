@@ -16,45 +16,45 @@ import { bpmnPropertyTest, bpmnScenarioTest } from '@etzhayyim/bpmn-sdk-testing'
  *                                     End (Rejected)
  */
 async function createInvoiceApprovalProcess() {
-  return flow('InvoiceApprovalProcess', f => f
-    .process('InvoiceApprovalProcess', p => p
+  return flow('InvoiceApprovalProcess', f =>
+    f.process('InvoiceApprovalProcess', p => {
       // Start Event
-      .startEvent('StartEvent')
+      p.startEvent('StartEvent');
 
       // Initial Review Task (User Task)
-      .userTask('ReviewInvoiceTask')
+      p.userTask('ReviewInvoiceTask');
 
       // XOR Gateway for amount check
-      .exclusiveGateway('AmountCheckGateway')
+      p.exclusiveGateway('AmountCheckGateway');
 
       // High amount path: Manual approval
-      .userTask('ManualApprovalTask')
+      p.userTask('ManualApprovalTask');
 
       // Low amount path: Auto approval
-      .serviceTask('AutoApprovalTask')
+      p.serviceTask('AutoApprovalTask');
 
       // Final processing
-      .serviceTask('ProcessInvoiceTask')
+      p.serviceTask('ProcessInvoiceTask');
 
       // End Event
-      .endEvent('EndEvent')
+      p.endEvent('EndEvent');
 
       // Sequence Flows
-      .sequenceFlow('StartEvent', 'ReviewInvoiceTask')
-      .sequenceFlow('ReviewInvoiceTask', 'AmountCheckGateway')
+      p.sequenceFlow('StartEvent', 'ReviewInvoiceTask');
+      p.sequenceFlow('ReviewInvoiceTask', 'AmountCheckGateway');
 
       // Gateway conditions
-      .sequenceFlow('AmountCheckGateway', 'ManualApprovalTask')
-        .condition('${amount > 1000}')
+      p.sequenceFlow('AmountCheckGateway', 'ManualApprovalTask')
+        .condition('${amount > 1000}');
 
-      .sequenceFlow('AmountCheckGateway', 'AutoApprovalTask')
-        .condition('${amount <= 1000}')
+      p.sequenceFlow('AmountCheckGateway', 'AutoApprovalTask')
+        .condition('${amount <= 1000}');
 
       // Continue flows
-      .sequenceFlow('ManualApprovalTask', 'ProcessInvoiceTask')
-      .sequenceFlow('AutoApprovalTask', 'ProcessInvoiceTask')
-      .sequenceFlow('ProcessInvoiceTask', 'EndEvent')
-    )
+      p.sequenceFlow('ManualApprovalTask', 'ProcessInvoiceTask');
+      p.sequenceFlow('AutoApprovalTask', 'ProcessInvoiceTask');
+      p.sequenceFlow('ProcessInvoiceTask', 'EndEvent');
+    })
   );
 }
 
@@ -66,7 +66,7 @@ async function runCompleteIntegrationTest() {
 
   let runtime: BpmnRuntime;
   let taskManager: HumanTaskManager;
-  let monitor: BpmnMonitor;
+  let monitor: BpmnMonitor | undefined;
 
   try {
     // ==========================================
@@ -143,7 +143,7 @@ async function runCompleteIntegrationTest() {
     ];
 
     for (const property of propertyTests) {
-      const result = await bpmnPropertyTest(runtime, invoiceProcess, property, {
+      const result = await bpmnPropertyTest(invoiceProcess, runtime, property, {
         maxTestCases: 10,
         timeout: 5000
       });
@@ -174,7 +174,7 @@ async function runCompleteIntegrationTest() {
     ];
 
     for (const scenario of scenarios) {
-      const result = await bpmnScenarioTest(runtime, invoiceProcess, scenario, {
+      const result = await bpmnScenarioTest(invoiceProcess, runtime, scenario, {
         timeout: 10000
       });
       console.log(`✅ Scenario "${scenario.id}": ${result.success ? 'PASSED' : 'FAILED'}`);
@@ -194,7 +194,7 @@ async function runCompleteIntegrationTest() {
 
     // Start high-amount instance (requires manual approval)
     console.log('\n📋 Executing High-Amount Invoice Process...');
-    const { context: highAmountContext } = await runtime.startInstance(deployedProcessId, {
+    const highAmountContext = await runtime.startInstance(deployedProcessId, {
       instanceId: 'instance-high-001',
       variables: {
         amount: 2500,
@@ -215,7 +215,7 @@ async function runCompleteIntegrationTest() {
     console.log(`📋 Found ${pendingTasks.length} pending tasks for manager`);
 
     if (pendingTasks.length > 0) {
-      const approvalTask = pendingTasks[0];
+      const approvalTask = pendingTasks[0]!;
       console.log(`   - Task: ${approvalTask.name} (${approvalTask.id})`);
 
       // Claim and complete the approval task
@@ -233,7 +233,7 @@ async function runCompleteIntegrationTest() {
 
     // Start low-amount instance (auto-approval)
     console.log('\n📋 Executing Low-Amount Invoice Process...');
-    const { context: lowAmountContext } = await runtime.startInstance(deployedProcessId, {
+    const lowAmountContext = await runtime.startInstance(deployedProcessId, {
       instanceId: 'instance-low-001',
       variables: {
         amount: 500,

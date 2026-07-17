@@ -1,7 +1,7 @@
 // Merkle DAG: ops_package_index
 // @etzhayyim/bpmn-sdk-ops のメインエクスポート
 
-export { BpmnMonitor } from './bpmn-monitor';
+export { BpmnMonitor } from './bpmn-monitor.js';
 export type {
   MonitoringConfig,
   ProcessMetrics,
@@ -22,4 +22,4 @@ export type {
   HealthStatusType,
   HealthCheck,
   PerformanceSnapshot,
-} from './types';
+} from './types.js';

@@ -9,7 +9,7 @@ import type {
   ReachabilityGraph,
   GatewayAnalysis,
   ProcessMetrics,
-} from './types';
+} from './types.js';
 
 export class BpmnValidator {
   private options: Required<ValidationOptions>;

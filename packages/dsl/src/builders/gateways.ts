@@ -2,7 +2,7 @@
 // DSL Gateway Builders - Exclusive/Inclusive/Parallel/EventBased/Complex
 
 import type { GatewayIR, SequenceFlowIR } from '@etzhayyim/bpmn-sdk-core';
-import type { DslContext, MutableGatewayIR, MutableSequenceFlowIR } from '../bpmn-dsl';
+import type { DslContext, MutableGatewayIR, MutableSequenceFlowIR } from '../bpmn-dsl.js';
 
 // Base Gateway Builder
 export class BaseGatewayBuilder {

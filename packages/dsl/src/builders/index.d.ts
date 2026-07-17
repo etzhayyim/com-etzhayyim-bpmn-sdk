@@ -1,5 +1,5 @@
-export * from './events';
-export * from './tasks';
-export * from './gateways';
-export * from './subprocess';
+export * from './events.js';
+export * from './tasks.js';
+export * from './gateways.js';
+export * from './subprocess.js';
 //# sourceMappingURL=index.d.ts.map

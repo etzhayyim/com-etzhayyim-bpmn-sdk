@@ -1,5 +1,6 @@
 {
   "name": "@etzhayyim/bpmn-sdk-compiler",
+  "type": "module",
   "version": "0.1.0",
   "description": "BPMN 2.0 IR to XML compiler using bpmn-moddle",
   "license": "Apache-2.0",
@@ -18,7 +19,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "biome check .",
     "format": "biome format --write .",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo",
     "doc": "typedoc --out docs src/index.ts"
   },
   "dependencies": {
@@ -28,7 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.1.1",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "@etzhayyim/bpmn-sdk-core": "workspace:*"
@@ -42,7 +43,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/etzhayyim/root.git",
-    "directory": "20-actors/etzhayyim-bpmn-sdk/packages/compiler"
+    "url": "https://github.com/etzhayyim/com-etzhayyim-bpmn-sdk.git"
   }
 }

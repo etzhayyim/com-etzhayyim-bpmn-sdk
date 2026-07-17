@@ -34,3 +34,4 @@ coverage/
 # Generated files
 *.generated.ts
 *.generated.js
+*.tsbuildinfo

@@ -1,4 +1,4 @@
-import type { FlowElement, Expression } from './common';
+import type { FlowElement, Expression } from './common.js';
 export type GatewayType = 'exclusive' | 'inclusive' | 'parallel' | 'eventBased' | 'complex';
 export interface BaseGateway extends FlowElement {
     readonly gatewayType: GatewayType;

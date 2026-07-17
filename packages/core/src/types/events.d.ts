@@ -1,4 +1,4 @@
-import type { FlowElement, EventDefinition } from './common';
+import type { FlowElement, EventDefinition } from './common.js';
 export type EventType = 'start' | 'intermediate' | 'end' | 'boundary';
 export type EventDefinitionType = 'message' | 'timer' | 'signal' | 'error' | 'escalation' | 'cancel' | 'compensation' | 'conditional' | 'link' | 'terminate' | 'multiple' | 'parallelMultiple';
 export interface BaseEvent extends FlowElement {

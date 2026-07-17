@@ -1,14 +1,16 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "types": ["node"],
     "outDir": "./dist",
+    "rootDir": "./src",
     "skipLibCheck": true,
     "exactOptionalPropertyTypes": false,
     "composite": false,
     "declaration": true,
-    "module": "CommonJS",
+    "module": "ESNext",
     "target": "ES2022",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "types": ["node", "jest"]
   },

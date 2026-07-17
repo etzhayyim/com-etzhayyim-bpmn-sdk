@@ -1,13 +1,13 @@
 // Merkle DAG: bpmn_definitions_types
 // BPMN 2.0 Definitions/Process 型定義 - トップレベル構造
 
-import type { BaseElement, BpmnId, BpmnName, FlowElement, Expression, CancelEventDefinition, CompensationEventDefinition, EventDefinition } from './common';
-import type { Event } from './events';
-import type { Task } from './tasks';
-import type { Gateway } from './gateways';
-import type { SubProcess } from './subprocess';
-import type { SequenceFlow, MessageFlow, DataObject, DataStore } from './flows';
-import type { Artifact } from './subprocess';
+import type { BaseElement, BpmnId, BpmnName, FlowElement, Expression, CancelEventDefinition, CompensationEventDefinition, EventDefinition } from './common.js';
+import type { Event } from './events.js';
+import type { Task } from './tasks.js';
+import type { Gateway } from './gateways.js';
+import type { SubProcess } from './subprocess.js';
+import type { SequenceFlow, MessageFlow, DataObject, DataStore } from './flows.js';
+import type { Artifact } from './subprocess.js';
 
 // BPMN Definitions - Root element
 export interface Definitions extends BaseElement {

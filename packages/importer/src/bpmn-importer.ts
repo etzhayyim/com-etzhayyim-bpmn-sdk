@@ -2,7 +2,7 @@
 // BPMN XML → IR Importer (reverse compiler)
 
 // Mock implementation for now - TODO: Implement full moddle integration
-import BpmnModdle from 'bpmn-moddle';
+import { BpmnModdle } from 'bpmn-moddle';
 import { fromXML } from 'moddle-xml';
 import type {
   BpmnIR,
@@ -20,7 +20,7 @@ import type {
 
 // BPMN Importer - Converts BPMN 2.0 XML to IR
 export class BpmnImporter {
-  private moddle: BpmnModdle;
+  private moddle: InstanceType<typeof BpmnModdle>;
 
   constructor() {
     this.moddle = new BpmnModdle();

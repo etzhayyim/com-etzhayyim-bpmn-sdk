@@ -2,8 +2,8 @@
 // DSL SubProcess Builders - Embedded/Event/Transaction/AdHoc
 
 import type { SubProcessIR, LaneSetIR } from '@etzhayyim/bpmn-sdk-core';
-import { ProcessBuilder } from '../bpmn-dsl';
-import type { DslContext, MutableSubProcessIR } from '../bpmn-dsl';
+import { ProcessBuilder } from '../bpmn-dsl.js';
+import type { DslContext, MutableSubProcessIR } from '../bpmn-dsl.js';
 
 // Base SubProcess Builder
 export class BaseSubprocessBuilder {

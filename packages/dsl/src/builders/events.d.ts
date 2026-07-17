@@ -1,4 +1,4 @@
-import type { DslContext, MutableEventIR } from '../bpmn-dsl';
+import type { DslContext, MutableEventIR } from '../bpmn-dsl.js';
 export declare class BaseEventBuilder {
     protected context: DslContext;
     protected event: MutableEventIR;

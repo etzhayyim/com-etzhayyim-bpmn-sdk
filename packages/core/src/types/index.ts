@@ -27,7 +27,7 @@ export type {
   MultipleEventDefinition,
   ParallelMultipleEventDefinition,
   EventDefinition,
-} from './common';
+} from './common.js';
 
 // Event types
 export type {
@@ -40,7 +40,7 @@ export type {
   EndEvent,
   BoundaryEvent,
   Event,
-} from './events';
+} from './events.js';
 
 // Task types
 export type {
@@ -61,7 +61,7 @@ export type {
   DataInput,
   DataOutput,
   InputOutputBinding,
-} from './tasks';
+} from './tasks.js';
 
 // Gateway types
 export type {
@@ -73,7 +73,7 @@ export type {
   EventBasedGateway,
   ComplexGateway,
   Gateway,
-} from './gateways';
+} from './gateways.js';
 
 // Subprocess types
 export type {
@@ -90,7 +90,7 @@ export type {
   TextAnnotation,
   LaneSet,
   Lane,
-} from './subprocess';
+} from './subprocess.js';
 
 // Flow types
 export type {
@@ -108,7 +108,7 @@ export type {
   CorrelationPropertyRetrievalExpression,
   Participant,
   ParticipantMultiplicity,
-} from './flows';
+} from './flows.js';
 
 // Definition types
 export type {
@@ -143,4 +143,4 @@ export type {
   Bounds,
   Point,
   BPMNLabel,
-} from './definitions';
+} from './definitions.js';
